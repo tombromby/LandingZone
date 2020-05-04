@@ -254,3 +254,11 @@ baseline_resources:
     parameter_file: parameters/aws_baseline/aws-landing-zone-primary-vpc.json
     deploy_method: stack_set
     parameter_override: true
+
+        #THis is a customization to add a central role for all LZ accounts
+    #relies on new CF template and folder
+  - name: LZCentralAdminRole
+    baseline_products:
+      - AWS-Landing-Zone-Account-Vending-Machine
+    template_file: templates/custom/add-lzadmin-role.yml
+    deploy_method: stack_set
