@@ -17,4 +17,19 @@ Resources:
               AWS: arn:aws:iam::924777225109:root
             Action: sts:AssumeRole
 
+  LZRoleRO:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LZCentralReadOnlyRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/ReadOnlyAccess
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: arn:aws:iam::924777225109:root
+            Action: sts:AssumeRole
+            
+
 
