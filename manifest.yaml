@@ -14,7 +14,7 @@ organizational_units:
     core_accounts:
       # Security account
       - name: security
-        email: tombby111+lz4@gmail.com
+        email: +lz4@gmail.com
         ssm_parameters:
           - name: /org/member/security/account_id
             value: $[AccountId]
@@ -72,7 +72,7 @@ organizational_units:
                 value: $[output_BucketName]
       # Shared Services account
       - name: shared-services
-        email: tombby111+lz2@gmail.com
+        email: +lz2@gmail.com
         ssm_parameters:
           - name: /org/member/sharedservices/account_id
             value: $[AccountId]
